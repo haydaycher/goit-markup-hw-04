@@ -200,6 +200,7 @@ img {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
@@ -247,6 +248,9 @@ img {
   padding: 24px 100px;
   margin-bottom: 8px;
   gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* .icons-first {
 } */
@@ -318,12 +322,22 @@ img {
   display: flex;
   gap: 24px;
   margin-left: 16px;
+  justify-content: center;
 }
 .icons-item {
   width: 40px;
   height: 40px;
 }
-.icons-link,
+.icons-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #404bbf;
+}
 .icons-link-footer {
   width: 100%;
   height: 100%;
@@ -332,6 +346,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons-link:hover {
   background-color: #404bbf;
@@ -345,8 +360,12 @@ img {
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.icons-link-footer:focus {
+  background-color: #31d0aa;
+}
+
 .icons {
-  fill: transparent;
+  fill: #f4f4fd;
   stroke: #ffffff;
 }
 .portfolio {
@@ -361,6 +380,9 @@ img {
 .portfolio-list-item {
   width: calc((100% - 24px * 3) / 4);
   width: 360px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-item:hover .portfolio-cover-text {
   transform: translateY(0);
@@ -386,7 +408,7 @@ img {
   padding-bottom: 40px;
   padding-left: 32px;
   transform: translateY(100%);
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-wrap {
   border: 1px solid #e7e9fc;
@@ -416,6 +438,10 @@ img {
 .footer-container {
   display: flex;
   gap: 120px;
+  align-items: baseline;
+}
+.first-footer-box {
+  margin-right: 120px;
 }
 .footer-logo {
   color: #4d5ae5;
@@ -441,7 +467,7 @@ img {
 }
 /* .footer-soc {
 } */
-.icons-social {
+.social-m {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -454,5 +480,9 @@ img {
 }
 .icons-list-footer {
   display: flex;
-  gap: 24px;
+  gap: 16px;
+}
+.icons-footer {
+  fill: #f4f4fd;
+  stroke: #ffffff;
 }
